@@ -6,9 +6,7 @@ import talks from '../db/talks.json';
  * Returns all the talks
  * @returns {Array} Containing talks
  */
-const getTalks = () => {
-  return talks;
-};
+const getTalks = () => {};
 
 /**
  * TASK 1
@@ -20,18 +18,7 @@ const getTalks = () => {
  * @param  {String} args.name name of a speaker
  * @return {Array} Containing speakers
  */
-const getSpeakers = args => {
-  if (args && (args.id || args.name)) {
-    return speakers.filter(speaker => {
-      if (args.id) {
-        return speaker.id === args.id;
-      } else if (speaker.name === args.name) {
-        return speaker;
-      }
-    });
-  }
-  return speakers;
-};
+const getSpeakers = () => {};
 
 /**
  * TASK 1
@@ -40,10 +27,6 @@ const getSpeakers = args => {
  * @return {Array} Returns all of the talks where the
  * speakerId matches the given argument.
  */
-const getTalksBySpeakerId = speakerId => {
-  return getTalks().filter(talk => {
-    return talk.speakerId === speakerId;
-  });
-};
+const getTalksBySpeakerId = () => {};
 
 export { getTalks, getSpeakers, getTalksBySpeakerId };
