@@ -5,7 +5,7 @@ import Talk from './talk';
  * TASK 2
  * Speakers and talks Query
  *
- * Query type which holds the queryies which could be called.
+ * Query type which holds the queries which could be called.
  */
 const Query = /* GraphQL */ `
   type Query {
