@@ -18,15 +18,6 @@ const Query = /* GraphQL */ `
 `;
 
 /**
- * Mutations
- */
-const Mutation = /* GraphQL */ `
-  type Mutation {
-    addSpeaker(name: String!, twitter: String, github: String, linkedin: String, bio: String!): Speaker
-  }
-`;
-
-/**
  * TASK 2
  * Schema where query is applied
  *
@@ -35,8 +26,7 @@ const Mutation = /* GraphQL */ `
 const Schema = /* GraphQL */ `
   schema {
     query: Query
-    mutation: Mutation
   }
 `;
 
-export default [Schema, Query, Mutation, Speaker, Talk];
+export default [Schema, Query, Speaker, Talk];
