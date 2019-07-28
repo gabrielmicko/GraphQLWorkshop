@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`testsuu task 4 GraphQL server should return one speaker by ID. 1`] = `
+exports[`tests task 4 GraphQL server should return one speaker by ID. 1`] = `
 Object {
   "data": Object {
     "speakers": Array [
@@ -27,7 +27,7 @@ Object {
 }
 `;
 
-exports[`testsuu task 4 GraphQL server should return one speaker by name. 1`] = `
+exports[`tests task 4 GraphQL server should return one speaker by name. 1`] = `
 Object {
   "data": Object {
     "speakers": Array [
