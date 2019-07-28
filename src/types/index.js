@@ -5,21 +5,12 @@ import Talk from './talk';
  * TASK 2
  * Speakers and talks Query
  *
- * Query type which holds the queryies which could be called.
+ * Query type which holds the queries which could be called.
  */
 const Query = /* GraphQL */ `
   type Query {
-    speakers(id: String, name: String): [Speaker!]
+    speakers: [Speaker!]
     talks: [Talk!]
-  }
-`;
-
-/**
- * Mutations
- */
-const Mutation = /* GraphQL */ `
-  type Mutation {
-    addSpeaker(name: String!, twitter: String, github: String, linkedin: String, bio: String!): Speaker
   }
 `;
 
@@ -32,8 +23,7 @@ const Mutation = /* GraphQL */ `
 const Schema = /* GraphQL */ `
   schema {
     query: Query
-    mutation: Mutation
   }
 `;
 
-export default [Schema, Query, Mutation, Speaker, Talk];
+export default [Schema, Query, Speaker, Talk];

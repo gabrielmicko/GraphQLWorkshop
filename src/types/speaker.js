@@ -13,7 +13,6 @@ const Speaker = /* GraphQL */ `
     github: String
     linkedin: String
     bio: String!
-    talks: [Talk]!
   }
 `;
 

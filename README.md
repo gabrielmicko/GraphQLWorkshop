@@ -1,51 +1,30 @@
 ## GraphQL Workshop
 
-### Task 7
+### Task 2
 
-Let's write your first mutation. Whenever you want to insert, update or delete from / to your database, you are suggested to write a mutation.
-Say you want to write an addSpeaker mutation.
+Now you are going to create your first minimalistic GraphQL server. The goal of this task is to be able to query for speakers and talks.
 
-Here is how a mutation call would look like:
-```javascript
-mutation addSpeaker {
-  addSpeaker(
-    name: "John Doe",
-    bio: "John Doe is a test user.",
-    facebook: "fb.com/john.doe",
-    github: "github.com/john.doe",
-    twitter: "github.com/john.doe",
-    linkedin: "linkedin.com/john.doe",
-    position: "Beeing a test everywhere.",
-    photo: "/john.doe.png") {
-      name,
-      bio,
-      facebook,
-      github,
-      twitter,
-      linkedin,
-      position,
-      photo
-    }
-}
-```
-
-As you see you have to pass arguments which represents the data you want to insert. Besides that you have to define what do you want to receive back as a response. In this example I would like to get back the inserted speakers data.
-
-The first thing you have to do is open "src/resolvers/index.js". Add the Mutation object with an addSpeaker key which is a function. This will be your resolver for mutation call. Use previously written function saveSpeakers from the model "src/model/db.js".
-The next step is to create the mutation type addSpekers with all the necessary arguments.
-
+- The first subtask would be to setup express to use GraphQL HTTP Server Middleware. File is here `src/server.js`. Please take a look how it is done on it's GitHub site https://github.com/graphql/express-graphql. Use the APP_PATH constant when defining the route.
+- It is time to write your first schemas. You will need two of them. First is for speakers, second is for talks. You can access these files in the `src/types` directory ("speaker.js", "talk.js"). Check `src/db/speakers.json` and `src/db/talks.json` to see the structure of the data. Visit http://dev.apollodata.com/tools/graphql-tools/generate-schema.html for more information about schemas (ie: "Author").
+- You need to define your main type definition where you have to attach the two previously written schemas. You can find the file here `src/types/index.js`. Define the Query type with containing two queries (speakers, talks) and the schema where you define the Query. Export every type definition in an array.
+- Resolvers will help you to call any function on a query. Do you remember the first model you wrote? It's time for you to use it at `src/resolvers/index.js`. Define a Query in the exported object.
+- Final step is to `makeExecutableSchema` at `src/schema.js`. Pass the resolvers and the type definitions to the function.
 
 #### Hints:
-- RethinkDB insert will return generated_keys Array, which contains the newly added ID, it also has an inserted key which contains the number of the inserted data.
-- Use the graphql-tools documentation.
 
+- Use the graphql-tools, express-graphql website for getting more help.
+- There is a `pretty` and `graphiql` key for GraphHTTP, you might want to use it.
 
 #### Running the GraphQL server:
+
 ```bash
-yarn run graphql
+yarn start
 ```
 
+Please test the functionality by running the server.
+
 #### Testing:
+
 When you are done, please run this command:
 
 ```bash
@@ -56,11 +35,6 @@ Or if you want to run the test on every change run this command:
 
 ```bash
 yarn run test:watch
-```
-
-#### Seed:
-```bash
-yarn run seed
 ```
 
 ##### Good luck!
