@@ -4,7 +4,7 @@ import { setTestDefaults } from '../../src/store/helper';
 import speakers from '../../src/db/speakers.json';
 import talks from '../../src/db/talks.json';
 
-describe('testsuu task 4', () => {
+describe('tests task 4', () => {
   beforeEach(() => {
     setTestDefaults(speakers, talks);
   });
