@@ -8,6 +8,9 @@ import { makeID } from '../utils/utils';
  * TASK 3
  * Defining Speaker talks query
  *
+ * TASK 4
+ * Argument passing
+ *
  */
 export default {
   Speaker: {
