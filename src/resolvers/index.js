@@ -9,11 +9,6 @@ import { getTalks, getSpeakers, getTalksBySpeakerId } from '../model/file';
  *
  */
 export default {
-  Speaker: {
-    talks: ({ id }) => {
-      return getTalksBySpeakerId(id);
-    },
-  },
   Query: {
     talks: (_, args) => getTalks(),
     speakers: (_, args) => getSpeakers(),
