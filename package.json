@@ -1,0 +1,43 @@
+{
+  "name": "GraphQLWorkshop",
+  "version": "1.0.0",
+  "description": "This is a workshop material for learning GraphQL, RethinkDB, Node",
+  "main": "index.js",
+  "scripts": {
+    "seed": "babel-node ./src/store/seed.js",
+    "start": "nodemon --ignore temp --exec babel-node ./src/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {},
+  "author": "Gabriel Micko",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.4.2",
+    "graphql-tools": "4.0.5",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/runtime": "^7.5.5",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(js)$": "babel-jest"
+    },
+    "watchPathIgnorePatterns": [
+      "node_modules",
+      "temp"
+    ],
+    "verbose": true
+  }
+}

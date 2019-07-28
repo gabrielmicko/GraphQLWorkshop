@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testsuu task 4 GraphQL server should return one speaker by ID. 1`] = `
+Object {
+  "data": Object {
+    "speakers": Array [
+      Object {
+        "bio": "I am enthusiastic front-end developer who loves the web and new technologies around it. I am tech speaker, contributor, volunteer at Mozilla. I believe in the mission to ensure the Internet is a global public resource, open and accessible to all.",
+        "github": "https://github.com/gabrielmicko",
+        "id": "13",
+        "linkedin": null,
+        "name": "Gabriel Mičko",
+        "talks": Array [
+          Object {
+            "date": "Aug 4 - 11:00",
+            "duration": 150,
+            "id": "13",
+            "speakerId": "13",
+            "talkTitle": "Building GraphQL Server with JS",
+            "talkType": "workshop",
+          },
+        ],
+        "twitter": "https://twitter.com/gabriel_micko",
+      },
+    ],
+  },
+}
+`;
+
+exports[`testsuu task 4 GraphQL server should return one speaker by name. 1`] = `
+Object {
+  "data": Object {
+    "speakers": Array [
+      Object {
+        "bio": "I am enthusiastic front-end developer who loves the web and new technologies around it. I am tech speaker, contributor, volunteer at Mozilla. I believe in the mission to ensure the Internet is a global public resource, open and accessible to all.",
+        "github": "https://github.com/gabrielmicko",
+        "id": "13",
+        "linkedin": null,
+        "name": "Gabriel Mičko",
+        "talks": Array [
+          Object {
+            "date": "Aug 4 - 11:00",
+            "duration": 150,
+            "id": "13",
+            "speakerId": "13",
+            "talkTitle": "Building GraphQL Server with JS",
+            "talkType": "workshop",
+          },
+        ],
+        "twitter": "https://twitter.com/gabriel_micko",
+      },
+    ],
+  },
+}
+`;
