@@ -1,6 +1,10 @@
 import Speaker from './speaker';
 import Talk from './talk';
+
 /**
+ * TASK 2
+ * Speakers and talks Query
+ *
  * Query type which holds the queryies which could be called.
  */
 const Query = /* GraphQL */ `
@@ -20,6 +24,9 @@ const Mutation = /* GraphQL */ `
 `;
 
 /**
+ * TASK 2
+ * Schema where query is applied
+ *
  * A schema containing Query and Mutation types
  */
 const Schema = /* GraphQL */ `

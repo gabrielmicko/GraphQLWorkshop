@@ -1,4 +1,7 @@
 /**
+ * TASK 2
+ * Speaker definition
+ *
  * Speaker type defining the parameters
  */
 

@@ -8,6 +8,8 @@ const APP_PATH = 'graphql';
 const app = Express();
 
 /**
+ * TASK 2
+ *
  * Express to use GraphHTTP
  * Set pretty and graphiql to true
  */

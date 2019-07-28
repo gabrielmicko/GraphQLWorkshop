@@ -2,8 +2,8 @@ import { getTalks, getSpeakers, getTalksBySpeakerId, saveSpeaker } from '../mode
 import { makeID } from '../utils/utils';
 
 /**
- * TASK X
- * Resolvers containing Queries and it's options, Mutation
+ * TASK 2
+ * Query talks, speakers calling resolvers
  */
 export default {
   Speaker: {

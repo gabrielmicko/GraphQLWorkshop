@@ -1,4 +1,6 @@
 /**
+ * TASK 2
+ *
  * Import makeExecutableSchema, resolvers, typeDefs
  * Call & export makeExecutableSchema, pass the imported variables
  */
@@ -8,5 +10,5 @@ import typeDefs from './types';
 
 export default makeExecutableSchema({
   resolvers,
-  typeDefs
+  typeDefs,
 });
