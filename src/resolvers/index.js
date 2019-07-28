@@ -4,6 +4,10 @@ import { makeID } from '../utils/utils';
 /**
  * TASK 2
  * Query talks, speakers calling resolvers
+ *
+ * TASK 3
+ * Defining Speaker talks query
+ *
  */
 export default {
   Speaker: {

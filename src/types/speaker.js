@@ -2,6 +2,9 @@
  * TASK 2
  * Speaker definition
  *
+ * TASK 3
+ * Talks definition
+ *
  * Speaker type defining the parameters
  */
 
