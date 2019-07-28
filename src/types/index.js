@@ -1,18 +1,10 @@
-import Speaker from './speaker';
-import Talk from './talk';
-
 /**
  * TASK 2
  * Speakers and talks Query
  *
  * Query type which holds the queries which could be called.
  */
-const Query = /* GraphQL */ `
-  type Query {
-    speakers: [Speaker!]
-    talks: [Talk!]
-  }
-`;
+const Query = /* GraphQL */ ``;
 
 /**
  * TASK 2
@@ -20,10 +12,6 @@ const Query = /* GraphQL */ `
  *
  * A schema containing Query and Mutation types
  */
-const Schema = /* GraphQL */ `
-  schema {
-    query: Query
-  }
-`;
+const Schema = /* GraphQL */ ``;
 
 export default [Schema, Query, Speaker, Talk];
