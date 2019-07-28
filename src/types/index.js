@@ -12,7 +12,7 @@ import Talk from './talk';
  */
 const Query = /* GraphQL */ `
   type Query {
-    speakers(id: String, name: String): [Speaker!]
+    speakers: [Speaker!]
     talks: [Talk!]
   }
 `;
