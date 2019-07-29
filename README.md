@@ -1,66 +1,43 @@
 ## GraphQL Workshop
 
-### Task 7
+### Task 5
 
-Let's write your first mutation. Whenever you want to insert, update or delete from / to your database, you are suggested to write a mutation.
-Say you want to write an addSpeaker mutation.
+#### Create database helper 🔍
 
-Here is how a mutation call would look like:
-```javascript
-mutation addSpeaker {
-  addSpeaker(
-    name: "John Doe",
-    bio: "John Doe is a test user.",
-    facebook: "fb.com/john.doe",
-    github: "github.com/john.doe",
-    twitter: "github.com/john.doe",
-    linkedin: "linkedin.com/john.doe",
-    position: "Beeing a test everywhere.",
-    photo: "/john.doe.png") {
-      name,
-      bio,
-      facebook,
-      github,
-      twitter,
-      linkedin,
-      position,
-      photo
-    }
-}
+```bash
+open https://github.com/typicode/lowdb
 ```
 
-As you see you have to pass arguments which represents the data you want to insert. Besides that you have to define what do you want to receive back as a response. In this example I would like to get back the inserted speakers data.
+All righty! 🚀 The new approach now is to replace the `.json` files with a database. To keep it as simple as possible, we are going to use `lowdb` which is a small JSON database for Node. This will be the first step on this journey. Your task will be to create a helper file which will handle the database operations, insert, delete, get etc. The path for it is here `src/store/helper.js`. Please do it according to the given documentation.
 
-The first thing you have to do is open "src/resolvers/index.js". Add the Mutation object with an addSpeaker key which is a function. This will be your resolver for mutation call. Use previously written function saveSpeakers from the model "src/model/db.js".
-The next step is to create the mutation type addSpekers with all the necessary arguments.
+#### Seed
 
+Important! Before you run the tests don't forget to seed the database with data. Run `yarn seed`. If you mess up the database at any time, just run this command again.
 
 #### Hints:
-- RethinkDB insert will return generated_keys Array, which contains the newly added ID, it also has an inserted key which contains the number of the inserted data.
-- Use the graphql-tools documentation.
 
-
-#### Running the GraphQL server:
-```bash
-yarn run graphql
-```
+- This task is a bit tricky. Feel free to ask. 🙋
+- The functions are synchronous.
+- Use the tests to test your functions.
 
 #### Testing:
+
 When you are done, please run this command:
 
 ```bash
-yarn run test
+yarn test
 ```
 
 Or if you want to run the test on every change run this command:
 
 ```bash
-yarn run test:watch
+yarn test:watch
 ```
 
 #### Seed:
+
 ```bash
-yarn run seed
+yarn seed
 ```
 
 ##### Good luck!
