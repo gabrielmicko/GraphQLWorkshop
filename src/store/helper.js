@@ -38,12 +38,12 @@ const setDefaults = (speakers, talks) => {
 };
 
 /**
- * TASK X
+ * TASK 5
  * Checks if data is data is Array or Object.
  * If Array iterates through it and pushes it to the database..
  * If Object it pushes it to the database.
  * Returns with the inserted data, Array of Objects or Object.
- * @param  {String} tableName Table name, where you insert/update/remove data.
+ * @param  {String} tableName Table name, where you insert/update/remove/gets data.
  * @param  {Array|Object} data Array containing Objects or a single Object.
  * @return {Array|Object} Retunrs the inserted data.
  */
@@ -67,10 +67,10 @@ const insertData = (tableName, data) => {
 };
 
 /**
- * TASK X
+ * TASK 5
  * Get all data from a table according to a filter object.
- * @param  {String} tableName Table name, where you insert/update/remove data.
- * @param  {Object} filters Object  containing the filter (ie. {speaker.id: 10}, check: filter()).
+ * @param  {String} tableName Table name, where you insert/update/remove/get data.
+ * @param  {Object} filters Object  containing the filter (ie. {speakerId: 10}, check: filter()).
  * @return {Array} Returns the filtered data set.
  */
 const getByFilters = (tableName, filters = {}) => {
@@ -82,9 +82,9 @@ const getByFilters = (tableName, filters = {}) => {
 };
 
 /**
- * TASK X
+ * TASK 5
  * Get all the data from a table.
- * @param  {String} tableName Table name, where you insert/update/remove data.
+ * @param  {String} tableName Table name, where you insert/update/remove/get data.
  * @return {Array} Returns all the data in the table.
  */
 const getAll = tableName => {
@@ -93,9 +93,9 @@ const getAll = tableName => {
 };
 
 /**
- * TASK X
+ * TASK 5
  * Removes everything from the table.
- * @param  {String} tableName Table name, where you insert/update/remove data.
+ * @param  {String} tableName Table name, where you insert/update/remove/get data.
  */
 const wipeTable = tableName => {
   let table = getTable(tableName);
@@ -103,7 +103,7 @@ const wipeTable = tableName => {
 };
 
 /**
- * TASK X
+ * TASK 5
  * Accepts list of tables (strings), calls wipeTable on each iteration.
  * @param  {Array} tables Array containing tables (strings), which you want to wipe (ie: ["speakers", "talks"]).
  */
