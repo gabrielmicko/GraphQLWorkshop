@@ -49,21 +49,6 @@ const setDefaults = (speakers, talks) => {
  */
 const insertData = (tableName, data) => {
   let table = getTable(tableName);
-
-  if (Array.isArray(data)) {
-    data.map(row => {
-      database
-        .get(table)
-        .push(row)
-        .write();
-    });
-  } else {
-    database
-      .get(table)
-      .push(data)
-      .write();
-  }
-  return data;
 };
 
 /**
@@ -75,10 +60,6 @@ const insertData = (tableName, data) => {
  */
 const getByFilters = (tableName, filters = {}) => {
   let table = getTable(tableName);
-  return database
-    .get(table)
-    .filter(filters)
-    .value();
 };
 
 /**
@@ -89,7 +70,6 @@ const getByFilters = (tableName, filters = {}) => {
  */
 const getAll = tableName => {
   let table = getTable(tableName);
-  return database.get(table).value();
 };
 
 /**
@@ -99,7 +79,6 @@ const getAll = tableName => {
  */
 const wipeTable = tableName => {
   let table = getTable(tableName);
-  database.set(table, []).write();
 };
 
 /**
@@ -107,10 +86,6 @@ const wipeTable = tableName => {
  * Accepts list of tables (strings), calls wipeTable on each iteration.
  * @param  {Array} tables Array containing tables (strings), which you want to wipe (ie: ["speakers", "talks"]).
  */
-const wipeTables = tables => {
-  tables.map(tableName => {
-    wipeTable(tableName);
-  });
-};
+const wipeTables = tables => {};
 
 export { getTable, insertData, wipeTables, getAll, getByFilters, wipeTable, setDefaults, setTestDefaults };
