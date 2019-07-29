@@ -23,11 +23,7 @@ const Query = /* GraphQL */ `
 /**
  * Mutations
  */
-const Mutation = /* GraphQL */ `
-  type Mutation {
-    addSpeaker(name: String!, twitter: String, github: String, linkedin: String, bio: String!): Speaker
-  }
-`;
+const Mutation = /* GraphQL */ ``;
 
 /**
  * TASK 2
@@ -38,7 +34,6 @@ const Mutation = /* GraphQL */ `
 const Schema = /* GraphQL */ `
   schema {
     query: Query
-    mutation: Mutation
   }
 `;
 
