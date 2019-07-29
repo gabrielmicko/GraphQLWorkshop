@@ -28,7 +28,7 @@ mutation addSpeaker {
 As you see you have to pass arguments which represents the data you want to insert. Besides that you have to define what do you want to receive back as a response. In this example I would like to get back the inserted speakers data.
 
 The first thing you have to do is open `src/resolvers/index.js`. Add the Mutation object with an `addSpeaker` key which is a function. This will be your resolver for mutation call. Use previously written function `saveSpeakers` from the model `src/model/db.js`. Before you call `saveSpeakers` make sure you generate a random ID for the speaker. For that you can use `makeID` from `utils/utils.js`.
-The next step is to create the mutation type `addSpekers` with all the necessary arguments (`src/types/index.js`).
+The next step is to create the mutation type `addSpekers` with all the necessary arguments (`src/types/index.js`). Dont forget to add the mutation to the schema and export it.
 
 #### Hints:
 
