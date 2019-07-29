@@ -1,7 +1,7 @@
 {
   "name": "GraphQLWorkshop",
   "version": "1.0.0",
-  "description": "This is a workshop material for learning GraphQL, RethinkDB, Node",
+  "description": "This is a workshop material for learning GraphQL, Node",
   "main": "index.js",
   "scripts": {
     "seed": "babel-node ./src/store/seed.js",
