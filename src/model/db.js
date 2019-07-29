@@ -5,9 +5,7 @@ import { getAll, getByFilters, insertData } from '../store/helper';
  * Resolves with all of the talks in the database.
  * @returns {Array} Returns all the talks.
  */
-const getTalks = () => {
-  return getAll('talks');
-};
+const getTalks = () => {};
 
 /**
  * TASK 6
@@ -19,9 +17,7 @@ const getTalks = () => {
  * @param  {String} args.name name of a speaker
  * @return {Array} Returns all the speakers that match the filter.
  */
-const getSpeakers = args => {
-  return getByFilters('speakers', args);
-};
+const getSpeakers = () => {};
 
 /**
  * TASK 6
@@ -30,11 +26,7 @@ const getSpeakers = args => {
  * @return {Array} Returns Array containing all of the talks where the
  * speakerId matches the given argument.
  */
-const getTalksBySpeakerId = speakerId => {
-  return getByFilters('talks', {
-    speakerId,
-  });
-};
+const getTalksBySpeakerId = () => {};
 
 /**
  * TASK 6
@@ -42,8 +34,6 @@ const getTalksBySpeakerId = speakerId => {
  * @param  {Object} speakerData Speaker data (ie. {name: "Gabriel", bio: "FE dev"})
  * @return {Object} speaker that was saved
  */
-const saveSpeaker = speakerData => {
-  return insertData('speakers', speakerData);
-};
+const saveSpeaker = () => {};
 
 export { getTalks, getSpeakers, getTalksBySpeakerId, saveSpeaker };
