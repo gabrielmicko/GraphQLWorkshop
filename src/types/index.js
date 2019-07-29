@@ -8,6 +8,9 @@ import Talk from './talk';
  * TASK 4
  * Argument passing
  *
+ * TASK 7
+ * Mutation addSpeakers
+ *
  * Query type which holds the queries which could be called.
  */
 const Query = /* GraphQL */ `

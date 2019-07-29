@@ -11,6 +11,9 @@ import { makeID } from '../utils/utils';
  * TASK 4
  * Argument passing
  *
+ * TASK 7
+ * Mutation addSpeakers, create random ID
+ *
  */
 export default {
   Speaker: {
